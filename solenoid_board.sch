@@ -133,7 +133,7 @@ F 3 "~" H 5300 1900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 5150 1900 2    50   ~ 0
-D5
+D12
 $Comp
 L MOSFETs:PHP79NQ08LT Q1
 U 1 1 5DDD651E
@@ -372,15 +372,15 @@ Connection ~ 9500 1950
 Wire Wire Line
 	9500 1950 9500 4200
 Text Label 5900 2400 2    50   ~ 0
-D6
-Text Label 6650 2900 2    50   ~ 0
-D9
-Text Label 7400 3400 2    50   ~ 0
-D10
-Text Label 8150 3900 2    50   ~ 0
 D11
+Text Label 6650 2900 2    50   ~ 0
+D10
+Text Label 7400 3400 2    50   ~ 0
+D9
+Text Label 8150 3900 2    50   ~ 0
+D6
 Text Label 8900 4400 2    50   ~ 0
-D12
+D5
 Text Label 1400 4800 0    50   ~ 0
 INP0_0
 Text Label 1400 4700 0    50   ~ 0
@@ -405,101 +405,75 @@ Text Label 2300 5700 0    50   ~ 0
 INP5_0
 Text Label 2300 5600 0    50   ~ 0
 INP5_1
-Text Label 3100 4700 2    50   ~ 0
-INP0_0
-Text Label 3100 4800 2    50   ~ 0
-INP0_1
-Text Label 3100 4900 2    50   ~ 0
-INP1_0
-Text Label 3100 5000 2    50   ~ 0
-INP1_1
-Text Label 3100 5100 2    50   ~ 0
-INP2_0
-Text Label 3100 5200 2    50   ~ 0
-INP2_1
-Text Label 3100 5300 2    50   ~ 0
-INP3_0
-Text Label 3100 5400 2    50   ~ 0
-INP3_1
-Text Label 3100 5500 2    50   ~ 0
-INP4_0
-Text Label 3100 5600 2    50   ~ 0
-INP4_1
-Text Label 3100 5700 2    50   ~ 0
-INP5_0
-Text Label 3100 5800 2    50   ~ 0
-INP5_1
-Text Label 3600 4700 0    50   ~ 0
-D13
 $Comp
 L LOGIC_ICs:74HC165 U5
 U 1 1 5DF21C65
-P 5650 4400
-F 0 "U5" H 5400 4200 50  0000 C CNN
-F 1 "74HC165" H 5400 4100 50  0000 C CNN
-F 2 "SN74HC165DR:SN74HC165DR" H 5650 4400 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf" H 5650 4400 50  0001 C CNN
-	1    5650 4400
+P 3550 4300
+F 0 "U5" H 3300 4100 50  0000 C CNN
+F 1 "74HC165" H 3300 4000 50  0000 C CNN
+F 2 "SN74HC165DR:SN74HC165DR" H 3550 4300 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf" H 3550 4300 50  0001 C CNN
+	1    3550 4300
 	1    0    0    -1  
 $EndComp
-Text Label 5650 4700 0    50   ~ 0
+Text Label 3550 4600 0    50   ~ 0
 3V3
-Text Label 5200 4900 2    50   ~ 0
+Text Label 3100 4800 2    50   ~ 0
 INP0_0
-Text Label 5200 5000 2    50   ~ 0
+Text Label 3100 4900 2    50   ~ 0
 INP0_1
-Text Label 5200 5100 2    50   ~ 0
+Text Label 3100 5000 2    50   ~ 0
 INP1_0
-Text Label 5200 5200 2    50   ~ 0
+Text Label 3100 5100 2    50   ~ 0
 INP1_1
-Text Label 5200 5300 2    50   ~ 0
+Text Label 3100 5200 2    50   ~ 0
 INP2_0
-Text Label 5200 5400 2    50   ~ 0
+Text Label 3100 5300 2    50   ~ 0
 INP2_1
-Text Label 5200 5500 2    50   ~ 0
+Text Label 3100 5400 2    50   ~ 0
 INP3_0
-Text Label 6100 4900 0    50   ~ 0
+Text Label 4000 4800 0    50   ~ 0
 A2
 Wire Wire Line
-	6100 5600 6100 5700
-Text Label 5200 5600 2    50   ~ 0
+	4000 5500 4000 5600
+Text Label 3100 5500 2    50   ~ 0
 INP3_1
-Text Label 5200 5700 2    50   ~ 0
+Text Label 3100 5600 2    50   ~ 0
 A0
-Text Label 6100 5500 0    50   ~ 0
+Text Label 4000 5400 0    50   ~ 0
 A1
 $Comp
 L LOGIC_ICs:74HC165 U6
 U 1 1 5DF632DB
-P 7200 4400
-F 0 "U6" H 6950 4200 50  0000 C CNN
-F 1 "74HC165" H 6950 4100 50  0000 C CNN
-F 2 "SN74HC165DR:SN74HC165DR" H 7200 4400 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf" H 7200 4400 50  0001 C CNN
-	1    7200 4400
+P 5100 4300
+F 0 "U6" H 4850 4100 50  0000 C CNN
+F 1 "74HC165" H 4850 4000 50  0000 C CNN
+F 2 "SN74HC165DR:SN74HC165DR" H 5100 4300 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf" H 5100 4300 50  0001 C CNN
+	1    5100 4300
 	1    0    0    -1  
 $EndComp
-Text Label 6750 4900 2    50   ~ 0
+Text Label 4650 4800 2    50   ~ 0
 INP4_0
-Text Label 6750 5000 2    50   ~ 0
+Text Label 4650 4900 2    50   ~ 0
 INP4_1
-Text Label 6750 5100 2    50   ~ 0
+Text Label 4650 5000 2    50   ~ 0
 INP5_0
-Text Label 6750 5200 2    50   ~ 0
+Text Label 4650 5100 2    50   ~ 0
 INP5_1
-Text Label 6750 5700 2    50   ~ 0
+Text Label 4650 5600 2    50   ~ 0
 A0
-Text Label 7650 5500 0    50   ~ 0
+Text Label 5550 5400 0    50   ~ 0
 A1
-Text Label 7650 4900 0    50   ~ 0
+Text Label 5550 4800 0    50   ~ 0
 A3
 Wire Wire Line
-	7650 5600 7650 5700
+	5550 5500 5550 5600
 Wire Wire Line
-	7650 5700 7650 5900
+	5550 5600 5550 5800
 Wire Wire Line
-	7650 5900 7200 5900
-Connection ~ 7650 5700
+	5550 5800 5100 5800
+Connection ~ 5550 5600
 $Comp
 L Connector:Screw_Terminal_01x02 J4
 U 1 1 5DFBF900
@@ -547,21 +521,21 @@ $EndComp
 $Comp
 L power:GND #PWR017
 U 1 1 5E07290C
-P 7200 5900
-F 0 "#PWR017" H 7200 5650 50  0001 C CNN
-F 1 "GND" H 7205 5727 50  0000 C CNN
-F 2 "" H 7200 5900 50  0001 C CNN
-F 3 "" H 7200 5900 50  0001 C CNN
-	1    7200 5900
+P 5100 5800
+F 0 "#PWR017" H 5100 5550 50  0001 C CNN
+F 1 "GND" H 5105 5627 50  0000 C CNN
+F 2 "" H 5100 5800 50  0001 C CNN
+F 3 "" H 5100 5800 50  0001 C CNN
+	1    5100 5800
 	1    0    0    -1  
 $EndComp
-Connection ~ 7200 5900
-NoConn ~ 6100 5000
-NoConn ~ 7650 5000
-NoConn ~ 6750 5300
-NoConn ~ 6750 5400
-NoConn ~ 6750 5500
-NoConn ~ 6750 5600
+Connection ~ 5100 5800
+NoConn ~ 4000 4900
+NoConn ~ 5550 4900
+NoConn ~ 4650 5200
+NoConn ~ 4650 5300
+NoConn ~ 4650 5400
+NoConn ~ 4650 5500
 NoConn ~ 1200 900 
 NoConn ~ 1200 700 
 NoConn ~ 2200 1100
@@ -591,20 +565,20 @@ $EndComp
 $Comp
 L power:GND #PWR0102
 U 1 1 5E13533A
-P 5650 5900
-F 0 "#PWR0102" H 5650 5650 50  0001 C CNN
-F 1 "GND" H 5655 5727 50  0000 C CNN
-F 2 "" H 5650 5900 50  0001 C CNN
-F 3 "" H 5650 5900 50  0001 C CNN
-	1    5650 5900
+P 3550 5800
+F 0 "#PWR0102" H 3550 5550 50  0001 C CNN
+F 1 "GND" H 3555 5627 50  0000 C CNN
+F 2 "" H 3550 5800 50  0001 C CNN
+F 3 "" H 3550 5800 50  0001 C CNN
+	1    3550 5800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6100 5700 6100 5900
+	4000 5600 4000 5800
 Wire Wire Line
-	6100 5900 5650 5900
-Connection ~ 6100 5700
-Connection ~ 5650 5900
+	4000 5800 3550 5800
+Connection ~ 4000 5600
+Connection ~ 3550 5800
 $Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 5E13D366
@@ -617,7 +591,7 @@ F 3 "~" H 1100 2200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 1100 2200
-Text Label 7200 4700 0    50   ~ 0
+Text Label 5100 4600 0    50   ~ 0
 3V3
 Wire Wire Line
 	4800 1050 5100 1050
@@ -742,52 +716,10 @@ F 3 "" H 2550 3600 60  0000 C CNN
 	1    2550 3600
 	-1   0    0    1   
 $EndComp
-$Comp
-L Device:R R1
-U 1 1 5E1E46ED
-P 2700 3350
-F 0 "R1" V 2493 3350 50  0000 C CNN
-F 1 "10" V 2584 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 2630 3350 50  0001 C CNN
-F 3 "~" H 2700 3350 50  0001 C CNN
-	1    2700 3350
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 5E1E5003
-P 2700 3600
-F 0 "R8" V 2800 3600 50  0000 C CNN
-F 1 "10" V 2900 3600 50  0000 C CNN
-F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 2630 3600 50  0001 C CNN
-F 3 "~" H 2700 3600 50  0001 C CNN
-	1    2700 3600
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	3300 3600 2850 3600
 Wire Wire Line
 	3300 3500 2850 3500
-Wire Wire Line
-	2850 3500 2850 3350
-Wire Wire Line
-	2850 3350 2850 2900
-Wire Wire Line
-	2850 2900 1800 2900
-Wire Wire Line
-	1800 2900 1800 3450
-Wire Wire Line
-	1800 3450 1600 3450
-Connection ~ 2850 3350
-Wire Wire Line
-	2850 3600 2850 3900
-Wire Wire Line
-	2850 3900 1800 3900
-Wire Wire Line
-	1800 3900 1800 3550
-Wire Wire Line
-	1800 3550 1600 3550
-Connection ~ 2850 3600
 $Comp
 L power:GND #PWR03
 U 1 1 5E1FB01A
@@ -882,33 +814,36 @@ F 3 "~" H 2100 5700 50  0001 C CNN
 	1    2100 5700
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	3100 4700 3100 5800
 $Comp
-L Device:R R9
-U 1 1 5E258296
-P 3350 4550
-F 0 "R9" H 3280 4504 50  0000 R CNN
-F 1 "10k" H 3280 4595 50  0000 R CNN
-F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 3280 4550 50  0001 C CNN
-F 3 "~" H 3350 4550 50  0001 C CNN
-	1    3350 4550
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR05
-U 1 1 5E25B400
-P 3350 4400
-F 0 "#PWR05" H 3350 4150 50  0001 C CNN
-F 1 "GND" V 3355 4272 50  0000 R CNN
-F 2 "" H 3350 4400 50  0001 C CNN
-F 3 "" H 3350 4400 50  0001 C CNN
-	1    3350 4400
+L Device:R R8
+U 1 1 5E1E5003
+P 2700 3600
+F 0 "R8" V 2800 3600 50  0000 C CNN
+F 1 "10" V 2900 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 2630 3600 50  0001 C CNN
+F 3 "~" H 2700 3600 50  0001 C CNN
+	1    2700 3600
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3100 4700 3350 4700
-Wire Wire Line
-	3350 4700 3600 4700
-Connection ~ 3350 4700
+	2850 3500 2850 3350
+$Comp
+L Device:R R1
+U 1 1 5E1E46ED
+P 2700 3350
+F 0 "R1" V 2493 3350 50  0000 C CNN
+F 1 "10" V 2584 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 2630 3350 50  0001 C CNN
+F 3 "~" H 2700 3350 50  0001 C CNN
+	1    2700 3350
+	0    1    1    0   
+$EndComp
+Text Label 1600 3450 0    50   ~ 0
+RJ45_5
+Text Label 1600 3550 0    50   ~ 0
+RJ45_4
+Text Label 2850 3350 0    50   ~ 0
+RJ45_4
+Text Label 2900 3600 3    50   ~ 0
+RJ45_5
 $EndSCHEMATC
