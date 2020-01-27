@@ -131,9 +131,6 @@ F 3 "" H 5750 2100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5750 950  5750 750 
-Wire Wire Line
-	5750 1450 5750 1700
-Connection ~ 5750 1450
 $Comp
 L MOSFETs:PHP79NQ08LT Q2
 U 1 1 5DDEEB2F
@@ -243,22 +240,7 @@ F 3 "" H 8000 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6500 1550 6500 2200
-Connection ~ 6500 1550
-Wire Wire Line
-	7250 1650 7250 2700
-Connection ~ 7250 1650
-Wire Wire Line
-	8000 1750 8000 3200
-Connection ~ 8000 1750
-Wire Wire Line
 	5750 1450 10100 1450
-Wire Wire Line
-	6500 1550 10100 1550
-Wire Wire Line
-	7250 1650 10100 1650
-Wire Wire Line
-	8000 1750 10100 1750
 $Comp
 L Device:R R6
 U 1 1 5DE301D3
@@ -331,16 +313,6 @@ F 3 "" H 9500 4600 50  0001 C CNN
 	1    9500 4600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8750 1850 10100 1850
-Wire Wire Line
-	8750 1850 8750 3700
-Connection ~ 8750 1850
-Wire Wire Line
-	10100 1950 9500 1950
-Connection ~ 9500 1950
-Wire Wire Line
-	9500 1950 9500 4200
 Text Label 5900 2400 2    50   ~ 0
 D11
 Text Label 6650 2900 2    50   ~ 0
@@ -618,28 +590,18 @@ Wire Wire Line
 Wire Wire Line
 	5750 950  5750 1450
 Connection ~ 5750 950 
-Wire Wire Line
-	6500 950  6500 1550
 Connection ~ 6500 950 
 Wire Wire Line
 	6500 950  7250 950 
-Wire Wire Line
-	7250 950  7250 1650
 Connection ~ 7250 950 
 Wire Wire Line
 	7250 950  8000 950 
-Wire Wire Line
-	8000 950  8000 1750
 Connection ~ 8000 950 
 Wire Wire Line
 	8000 950  8750 950 
-Wire Wire Line
-	8750 950  8750 1850
 Connection ~ 8750 950 
 Wire Wire Line
 	8750 950  9500 950 
-Wire Wire Line
-	9500 950  9500 1950
 $Comp
 L power:GND #PWR04
 U 1 1 5E1CED32
@@ -700,17 +662,6 @@ NoConn ~ 1600 3650
 NoConn ~ 1600 3350
 NoConn ~ 1600 3250
 NoConn ~ 1600 3150
-$Comp
-L Connector:Screw_Terminal_01x06 J6
-U 1 1 5E21E9C4
-P 10300 1650
-F 0 "J6" H 10380 1642 50  0000 L CNN
-F 1 "Screw_Terminal_01x06" H 10380 1551 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10300 1650 50  0001 C CNN
-F 3 "~" H 10300 1650 50  0001 C CNN
-	1    10300 1650
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J1
 U 1 1 5E2241F2
@@ -821,4 +772,70 @@ NoConn ~ 1200 1200
 NoConn ~ 2200 1400
 Text Label 2200 1400 2    50   ~ 0
 D13
+Wire Wire Line
+	5750 1550 5750 1700
+Wire Wire Line
+	5750 1550 10100 1550
+Wire Wire Line
+	6500 950  6500 1650
+Wire Wire Line
+	6500 1750 6500 2200
+Wire Wire Line
+	7250 950  7250 1850
+Wire Wire Line
+	6500 1650 10100 1650
+Wire Wire Line
+	8000 950  8000 2050
+Wire Wire Line
+	6500 1750 10100 1750
+Wire Wire Line
+	7250 1850 10100 1850
+Wire Wire Line
+	8750 950  8750 2250
+Wire Wire Line
+	7250 1950 7250 2700
+Wire Wire Line
+	7250 1950 10100 1950
+Wire Wire Line
+	9500 950  9500 2450
+Wire Wire Line
+	10100 2050 8000 2050
+Wire Wire Line
+	10100 2150 8000 2150
+Wire Wire Line
+	8000 2150 8000 3200
+Wire Wire Line
+	10100 2250 8750 2250
+Wire Wire Line
+	10100 2350 8750 2350
+Wire Wire Line
+	8750 2350 8750 3700
+Wire Wire Line
+	10100 2450 9500 2450
+Wire Wire Line
+	10100 2550 9500 2550
+Wire Wire Line
+	9500 2550 9500 4200
+$Comp
+L Connector:Screw_Terminal_01x06 J6
+U 1 1 5E363393
+P 10300 1650
+F 0 "J6" H 10380 1642 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10380 1551 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10300 1650 50  0001 C CNN
+F 3 "~" H 10300 1650 50  0001 C CNN
+	1    10300 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x06 J12
+U 1 1 5E364567
+P 10300 2250
+F 0 "J12" H 10380 2242 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10380 2151 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10300 2250 50  0001 C CNN
+F 3 "~" H 10300 2250 50  0001 C CNN
+	1    10300 2250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
