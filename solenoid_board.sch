@@ -28,30 +28,20 @@ Wire Wire Line
 	1200 800  1100 800 
 Wire Wire Line
 	1200 1000 1100 1000
-Wire Wire Line
-	1200 1100 1100 1100
-Wire Wire Line
-	1200 1200 1100 1200
 Text Label 1200 700  2    50   ~ 0
 RST
 Text Label 1100 800  0    50   ~ 0
 3V3
 Text Label 1200 900  2    50   ~ 0
 ARf
-Text Label 1100 1100 0    50   ~ 0
+Text Label 1200 1100 2    50   ~ 0
 A0
-Text Label 1100 1200 0    50   ~ 0
+Text Label 1200 1200 2    50   ~ 0
 A1
 Wire Wire Line
-	1200 1300 1100 1300
-Wire Wire Line
-	1200 1400 1100 1400
-Wire Wire Line
 	1200 2200 1100 2200
-Text Label 1100 1300 0    50   ~ 0
+Text Label 1200 1300 2    50   ~ 0
 A2
-Text Label 1100 1400 0    50   ~ 0
-A3
 Text Label 1200 1500 2    50   ~ 0
 A4
 Text Label 1200 1600 2    50   ~ 0
@@ -78,44 +68,24 @@ F 3 "~" H 2400 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2200 1100 2100 1100
-Wire Wire Line
-	2200 1200 2100 1200
-Wire Wire Line
 	2200 1300 2100 1300
-Wire Wire Line
-	2200 1400 2100 1400
-Wire Wire Line
-	2200 1500 2100 1500
-Wire Wire Line
-	2200 1600 2100 1600
-Wire Wire Line
-	2200 1700 2100 1700
-Wire Wire Line
-	2200 1800 2100 1800
-Wire Wire Line
-	2200 1900 2100 1900
-Wire Wire Line
-	2200 2000 2100 2000
-Text Label 2100 1100 0    50   ~ 0
+Text Label 2200 1100 2    50   ~ 0
 BAT
-Text Label 2100 1200 0    50   ~ 0
+Text Label 2200 1200 2    50   ~ 0
 En
-Text Label 2100 1300 0    50   ~ 0
+Text Label 2200 1300 2    50   ~ 0
 USB
-Text Label 2100 1400 0    50   ~ 0
-D13
-Text Label 2100 1500 0    50   ~ 0
+Text Label 2200 1500 2    50   ~ 0
 D12
-Text Label 2100 1600 0    50   ~ 0
+Text Label 2200 1600 2    50   ~ 0
 D11
-Text Label 2100 1700 0    50   ~ 0
+Text Label 2200 1700 2    50   ~ 0
 D10
-Text Label 2100 1800 0    50   ~ 0
+Text Label 2200 1800 2    50   ~ 0
 D9
-Text Label 2100 1900 0    50   ~ 0
+Text Label 2200 1900 2    50   ~ 0
 D6
-Text Label 2100 2000 0    50   ~ 0
+Text Label 2200 2000 2    50   ~ 0
 D5
 Text Label 2200 2100 2    50   ~ 0
 SCL
@@ -432,16 +402,12 @@ Text Label 3100 5300 2    50   ~ 0
 INP2_1
 Text Label 3100 5400 2    50   ~ 0
 INP3_0
-Text Label 4000 4800 0    50   ~ 0
-A2
-Wire Wire Line
-	4000 5500 4000 5600
 Text Label 3100 5500 2    50   ~ 0
 INP3_1
 Text Label 3100 5600 2    50   ~ 0
 A0
 Text Label 4000 5400 0    50   ~ 0
-A1
+SCK
 $Comp
 L LOGIC_ICs:74HC165 U6
 U 1 1 5DF632DB
@@ -464,9 +430,9 @@ INP5_1
 Text Label 4650 5600 2    50   ~ 0
 A0
 Text Label 5550 5400 0    50   ~ 0
-A1
+SCK
 Text Label 5550 4800 0    50   ~ 0
-A3
+SHIFT2_OUT
 Wire Wire Line
 	5550 5500 5550 5600
 Wire Wire Line
@@ -577,7 +543,6 @@ Wire Wire Line
 	4000 5600 4000 5800
 Wire Wire Line
 	4000 5800 3550 5800
-Connection ~ 4000 5600
 Connection ~ 3550 5800
 $Comp
 L power:PWR_FLAG #FLG0103
@@ -645,9 +610,7 @@ F 3 "" H 3300 2500 60  0000 C CNN
 $EndComp
 Text Label 4000 3300 0    50   ~ 0
 RX0
-NoConn ~ 1200 1700
 NoConn ~ 1200 1800
-NoConn ~ 1200 1900
 Text Label 3300 3300 2    50   ~ 0
 TX1
 Wire Wire Line
@@ -846,4 +809,16 @@ Text Label 2850 3350 0    50   ~ 0
 RJ45_4
 Text Label 2900 3600 3    50   ~ 0
 RJ45_5
+Text Label 4000 5500 0    50   ~ 0
+SHIFT2_OUT
+Text Label 4000 4800 0    50   ~ 0
+MISO
+Text Label 1200 1400 2    50   ~ 0
+A3
+NoConn ~ 1200 1400
+NoConn ~ 1200 1300
+NoConn ~ 1200 1200
+NoConn ~ 2200 1400
+Text Label 2200 1400 2    50   ~ 0
+D13
 $EndSCHEMATC
