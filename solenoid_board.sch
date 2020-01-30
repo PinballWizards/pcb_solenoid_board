@@ -14,18 +14,24 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_01x16_Female J1
+L Connector:Conn_01x16_Female J2
 U 1 1 5DDBFE35
 P 1400 1400
-F 0 "J1" H 1428 1376 50  0000 L CNN
+F 0 "J2" H 1428 1376 50  0000 L CNN
 F 1 "MCU_LEFT_LEGS" H 1428 1285 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 1400 1400 50  0001 C CNN
 F 3 "~" H 1400 1400 50  0001 C CNN
 	1    1400 1400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1200 800  1100 800 
+Wire Wire Line
+	1200 1000 1100 1000
 Text Label 1200 700  2    50   ~ 0
 RST
+Text Label 1100 800  0    50   ~ 0
+3V3
 Text Label 1200 900  2    50   ~ 0
 ARf
 Text Label 1200 1100 2    50   ~ 0
@@ -53,39 +59,43 @@ TX1
 $Comp
 L Connector:Conn_01x12_Female J3
 U 1 1 5DDC670F
-P 2800 1600
-F 0 "J3" H 2828 1576 50  0000 L CNN
-F 1 "MCU_RIGHT_LEGS" H 2828 1485 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical" H 2800 1600 50  0001 C CNN
-F 3 "~" H 2800 1600 50  0001 C CNN
-	1    2800 1600
+P 2400 1600
+F 0 "J3" H 2428 1576 50  0000 L CNN
+F 1 "MCU_RIGHT_LEGS" H 2428 1485 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical" H 2400 1600 50  0001 C CNN
+F 3 "~" H 2400 1600 50  0001 C CNN
+	1    2400 1600
 	1    0    0    -1  
 $EndComp
-Text Label 2600 1100 2    50   ~ 0
+Wire Wire Line
+	2200 1300 2100 1300
+Text Label 2200 1100 2    50   ~ 0
 BAT
-Text Label 2600 1200 2    50   ~ 0
+Text Label 2200 1200 2    50   ~ 0
 En
-Text Label 2600 1500 2    50   ~ 0
+Text Label 2200 1300 2    50   ~ 0
+USB
+Text Label 2200 1500 2    50   ~ 0
 D12
-Text Label 2600 1600 2    50   ~ 0
+Text Label 2200 1600 2    50   ~ 0
 D11
-Text Label 2600 1700 2    50   ~ 0
+Text Label 2200 1700 2    50   ~ 0
 D10
-Text Label 2600 1800 2    50   ~ 0
+Text Label 2200 1800 2    50   ~ 0
 D9
-Text Label 2600 1900 2    50   ~ 0
+Text Label 2200 1900 2    50   ~ 0
 D6
-Text Label 2600 2000 2    50   ~ 0
+Text Label 2200 2000 2    50   ~ 0
 D5
-Text Label 2600 2100 2    50   ~ 0
+Text Label 2200 2100 2    50   ~ 0
 SCL
-Text Label 2600 2200 2    50   ~ 0
+Text Label 2200 2200 2    50   ~ 0
 SDA
 $Comp
-L Device:R R100_0
+L Device:R R2
 U 1 1 5DDCE541
 P 5300 1900
-F 0 "R100_0" V 5093 1900 50  0000 C CNN
+F 0 "R2" V 5093 1900 50  0000 C CNN
 F 1 "100" V 5184 1900 50  0000 C CNN
 F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 5230 1900 50  0001 C CNN
 F 3 "~" H 5300 1900 50  0001 C CNN
@@ -95,16 +105,16 @@ $EndComp
 Text Label 5150 1900 2    50   ~ 0
 D12
 $Comp
-L MOSFETs:PHP79NQ08LT FET0
+L MOSFETs:PHP79NQ08LT Q1
 U 1 1 5DDD651E
 P 5650 1900
-F 0 "FET0" H 5854 2082 50  0000 L CNN
+F 0 "Q1" H 5854 2082 50  0000 L CNN
 F 1 "PHP79NQ08LT" H 5854 1991 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5850 1825 50  0001 L CIN
 F 3 "https://assets.nexperia.com/documents/data-sheet/PHP79NQ08LT.pdf" H 5650 1900 50  0001 L CNN
-F 4 "M" H 5854 1900 50  0001 L CNN "Spice_Primitive"
-F 5 "PHP79NQ08LT" H 5854 1809 50  0001 L CNN "Spice_Model"
-F 6 "Y" H 5854 1718 50  0001 L CNN "Spice_Netlist_Enabled"
+F 4 "M" H 5854 1900 50  0000 L CNN "Spice_Primitive"
+F 5 "PHP79NQ08LT" H 5854 1809 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 5854 1718 50  0000 L CNN "Spice_Netlist_Enabled"
 	1    5650 1900
 	1    0    0    -1  
 $EndComp
@@ -122,24 +132,24 @@ $EndComp
 Wire Wire Line
 	5750 950  5750 750 
 $Comp
-L MOSFETs:PHP79NQ08LT FET1
+L MOSFETs:PHP79NQ08LT Q2
 U 1 1 5DDEEB2F
 P 6400 2400
-F 0 "FET1" H 6604 2582 50  0000 L CNN
+F 0 "Q2" H 6604 2582 50  0000 L CNN
 F 1 "PHP79NQ08LT" H 6604 2491 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6600 2325 50  0001 L CIN
 F 3 "https://assets.nexperia.com/documents/data-sheet/PHP79NQ08LT.pdf" H 6400 2400 50  0001 L CNN
-F 4 "M" H 6604 2400 50  0001 L CNN "Spice_Primitive"
-F 5 "PHP79NQ08LT" H 6604 2309 50  0001 L CNN "Spice_Model"
-F 6 "Y" H 6604 2218 50  0001 L CNN "Spice_Netlist_Enabled"
+F 4 "M" H 6604 2400 50  0000 L CNN "Spice_Primitive"
+F 5 "PHP79NQ08LT" H 6604 2309 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 6604 2218 50  0000 L CNN "Spice_Netlist_Enabled"
 	1    6400 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R100_1
+L Device:R R3
 U 1 1 5DDEF739
 P 6050 2400
-F 0 "R100_1" V 5843 2400 50  0000 C CNN
+F 0 "R3" V 5843 2400 50  0000 C CNN
 F 1 "100" V 5934 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 5980 2400 50  0001 C CNN
 F 3 "~" H 6050 2400 50  0001 C CNN
@@ -147,24 +157,24 @@ F 3 "~" H 6050 2400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L MOSFETs:PHP79NQ08LT FET2
+L MOSFETs:PHP79NQ08LT Q3
 U 1 1 5DDF6443
 P 7150 2900
-F 0 "FET2" H 7354 3082 50  0000 L CNN
+F 0 "Q3" H 7354 3082 50  0000 L CNN
 F 1 "PHP79NQ08LT" H 7354 2991 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7350 2825 50  0001 L CIN
 F 3 "https://assets.nexperia.com/documents/data-sheet/PHP79NQ08LT.pdf" H 7150 2900 50  0001 L CNN
-F 4 "M" H 7354 2900 50  0001 L CNN "Spice_Primitive"
-F 5 "PHP79NQ08LT" H 7354 2809 50  0001 L CNN "Spice_Model"
-F 6 "Y" H 7354 2718 50  0001 L CNN "Spice_Netlist_Enabled"
+F 4 "M" H 7354 2900 50  0000 L CNN "Spice_Primitive"
+F 5 "PHP79NQ08LT" H 7354 2809 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 7354 2718 50  0000 L CNN "Spice_Netlist_Enabled"
 	1    7150 2900
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R100_2
+L Device:R R4
 U 1 1 5DDF6BF7
 P 6800 2900
-F 0 "R100_2" V 6593 2900 50  0000 C CNN
+F 0 "R4" V 6593 2900 50  0000 C CNN
 F 1 "100" V 6684 2900 50  0000 C CNN
 F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 6730 2900 50  0001 C CNN
 F 3 "~" H 6800 2900 50  0001 C CNN
@@ -172,24 +182,24 @@ F 3 "~" H 6800 2900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L MOSFETs:PHP79NQ08LT FET3
+L MOSFETs:PHP79NQ08LT Q4
 U 1 1 5DDF9467
 P 7900 3400
-F 0 "FET3" H 8104 3582 50  0000 L CNN
+F 0 "Q4" H 8104 3582 50  0000 L CNN
 F 1 "PHP79NQ08LT" H 8104 3491 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8100 3325 50  0001 L CIN
 F 3 "https://assets.nexperia.com/documents/data-sheet/PHP79NQ08LT.pdf" H 7900 3400 50  0001 L CNN
-F 4 "M" H 8104 3400 50  0001 L CNN "Spice_Primitive"
-F 5 "PHP79NQ08LT" H 8104 3309 50  0001 L CNN "Spice_Model"
-F 6 "Y" H 8104 3218 50  0001 L CNN "Spice_Netlist_Enabled"
+F 4 "M" H 8104 3400 50  0000 L CNN "Spice_Primitive"
+F 5 "PHP79NQ08LT" H 8104 3309 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 8104 3218 50  0000 L CNN "Spice_Netlist_Enabled"
 	1    7900 3400
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R100_3
+L Device:R R5
 U 1 1 5DDF9BE7
 P 7550 3400
-F 0 "R100_3" V 7343 3400 50  0000 C CNN
+F 0 "R5" V 7343 3400 50  0000 C CNN
 F 1 "100" V 7434 3400 50  0000 C CNN
 F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 7480 3400 50  0001 C CNN
 F 3 "~" H 7550 3400 50  0001 C CNN
@@ -232,10 +242,10 @@ $EndComp
 Wire Wire Line
 	5750 1450 10100 1450
 $Comp
-L Device:R R100_4
+L Device:R R6
 U 1 1 5DE301D3
 P 8300 3900
-F 0 "R100_4" V 8093 3900 50  0000 C CNN
+F 0 "R6" V 8093 3900 50  0000 C CNN
 F 1 "100" V 8184 3900 50  0000 C CNN
 F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 8230 3900 50  0001 C CNN
 F 3 "~" H 8300 3900 50  0001 C CNN
@@ -243,24 +253,24 @@ F 3 "~" H 8300 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L MOSFETs:PHP79NQ08LT FET4
+L MOSFETs:PHP79NQ08LT Q5
 U 1 1 5DE30773
 P 8650 3900
-F 0 "FET4" H 8854 4082 50  0000 L CNN
+F 0 "Q5" H 8854 4082 50  0000 L CNN
 F 1 "PHP79NQ08LT" H 8854 3991 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8850 3825 50  0001 L CIN
 F 3 "https://assets.nexperia.com/documents/data-sheet/PHP79NQ08LT.pdf" H 8650 3900 50  0001 L CNN
-F 4 "M" H 8854 3900 50  0001 L CNN "Spice_Primitive"
-F 5 "PHP79NQ08LT" H 8854 3809 50  0001 L CNN "Spice_Model"
-F 6 "Y" H 8854 3718 50  0001 L CNN "Spice_Netlist_Enabled"
+F 4 "M" H 8854 3900 50  0000 L CNN "Spice_Primitive"
+F 5 "PHP79NQ08LT" H 8854 3809 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 8854 3718 50  0000 L CNN "Spice_Netlist_Enabled"
 	1    8650 3900
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R100_5
+L Device:R R7
 U 1 1 5DE311C6
 P 9050 4400
-F 0 "R100_5" V 8843 4400 50  0000 C CNN
+F 0 "R7" V 8843 4400 50  0000 C CNN
 F 1 "100" V 8934 4400 50  0000 C CNN
 F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 8980 4400 50  0001 C CNN
 F 3 "~" H 9050 4400 50  0001 C CNN
@@ -279,16 +289,16 @@ F 3 "" H 8750 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MOSFETs:PHP79NQ08LT FET5
+L MOSFETs:PHP79NQ08LT Q6
 U 1 1 5DE32CCD
 P 9400 4400
-F 0 "FET5" H 9604 4582 50  0000 L CNN
+F 0 "Q6" H 9604 4582 50  0000 L CNN
 F 1 "PHP79NQ08LT" H 9604 4491 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9600 4325 50  0001 L CIN
 F 3 "https://assets.nexperia.com/documents/data-sheet/PHP79NQ08LT.pdf" H 9400 4400 50  0001 L CNN
-F 4 "M" H 9604 4400 50  0001 L CNN "Spice_Primitive"
-F 5 "PHP79NQ08LT" H 9604 4309 50  0001 L CNN "Spice_Model"
-F 6 "Y" H 9604 4218 50  0001 L CNN "Spice_Netlist_Enabled"
+F 4 "M" H 9604 4400 50  0000 L CNN "Spice_Primitive"
+F 5 "PHP79NQ08LT" H 9604 4309 50  0000 L CNN "Spice_Model"
+F 6 "Y" H 9604 4218 50  0000 L CNN "Spice_Netlist_Enabled"
 	1    9400 4400
 	1    0    0    -1  
 $EndComp
@@ -338,16 +348,18 @@ INP5_0
 Text Label 2300 5600 0    50   ~ 0
 INP5_1
 $Comp
-L LOGIC_ICs:74HC165 8b_0
+L LOGIC_ICs:74HC165 U5
 U 1 1 5DF21C65
 P 3550 4300
-F 0 "8b_0" H 3300 4100 50  0000 C CNN
+F 0 "U5" H 3300 4100 50  0000 C CNN
 F 1 "74HC165" H 3300 4000 50  0000 C CNN
 F 2 "SN74HC165DR:SN74HC165DR" H 3550 4300 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf" H 3550 4300 50  0001 C CNN
 	1    3550 4300
 	1    0    0    -1  
 $EndComp
+Text Label 3550 4600 0    50   ~ 0
+3V3
 Text Label 3100 4800 2    50   ~ 0
 INP0_0
 Text Label 3100 4900 2    50   ~ 0
@@ -369,10 +381,10 @@ A0
 Text Label 4000 5400 0    50   ~ 0
 SCK
 $Comp
-L LOGIC_ICs:74HC165 8b_1
+L LOGIC_ICs:74HC165 U6
 U 1 1 5DF632DB
 P 5100 4300
-F 0 "8b_1" H 4850 4100 50  0000 C CNN
+F 0 "U6" H 4850 4100 50  0000 C CNN
 F 1 "74HC165" H 4850 4000 50  0000 C CNN
 F 2 "SN74HC165DR:SN74HC165DR" H 5100 4300 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf" H 5100 4300 50  0001 C CNN
@@ -401,11 +413,11 @@ Wire Wire Line
 	5550 5800 5100 5800
 Connection ~ 5550 5600
 $Comp
-L Connector:Screw_Terminal_01x02 48V_IN1
+L Connector:Screw_Terminal_01x02 J4
 U 1 1 5DFBF900
 P 4600 1150
-F 0 "48V_IN1" H 4518 825 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 4518 916 50  0001 C CNN
+F 0 "J4" H 4518 825 50  0000 C CNN
+F 1 "Solenoid_PWR_Supply" H 4518 916 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 4600 1150 50  0001 C CNN
 F 3 "~" H 4600 1150 50  0001 C CNN
 	1    4600 1150
@@ -436,13 +448,13 @@ $EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 5E062C1F
-P 800 1000
-F 0 "#PWR01" H 800 750 50  0001 C CNN
-F 1 "GND" V 805 872 50  0000 R CNN
-F 2 "" H 800 1000 50  0001 C CNN
-F 3 "" H 800 1000 50  0001 C CNN
-	1    800  1000
-	1    0    0    -1  
+P 1100 1000
+F 0 "#PWR01" H 1100 750 50  0001 C CNN
+F 1 "GND" V 1105 872 50  0000 R CNN
+F 2 "" H 1100 1000 50  0001 C CNN
+F 3 "" H 1100 1000 50  0001 C CNN
+	1    1100 1000
+	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR017
@@ -464,8 +476,30 @@ NoConn ~ 4650 5400
 NoConn ~ 4650 5500
 NoConn ~ 1200 900 
 NoConn ~ 1200 700 
-NoConn ~ 2600 1100
-NoConn ~ 2600 1200
+NoConn ~ 2200 1100
+NoConn ~ 2200 1200
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E12EED8
+P 1100 800
+F 0 "#FLG0101" H 1100 875 50  0001 C CNN
+F 1 "PWR_FLAG" V 1100 927 50  0000 L CNN
+F 2 "" H 1100 800 50  0001 C CNN
+F 3 "~" H 1100 800 50  0001 C CNN
+	1    1100 800 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E12F5C4
+P 2100 1300
+F 0 "#FLG0102" H 2100 1375 50  0001 C CNN
+F 1 "PWR_FLAG" V 2100 1427 50  0000 L CNN
+F 2 "" H 2100 1300 50  0001 C CNN
+F 3 "~" H 2100 1300 50  0001 C CNN
+	1    2100 1300
+	0    -1   -1   0   
+$EndComp
 $Comp
 L power:GND #PWR0102
 U 1 1 5E13533A
@@ -482,6 +516,20 @@ Wire Wire Line
 Wire Wire Line
 	4000 5800 3550 5800
 Connection ~ 3550 5800
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5E13D366
+P 1100 2200
+F 0 "#FLG0103" H 1100 2275 50  0001 C CNN
+F 1 "PWR_FLAG" V 1100 2327 50  0000 L CNN
+F 2 "" H 1100 2200 50  0001 C CNN
+F 3 "~" H 1100 2200 50  0001 C CNN
+	1    1100 2200
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1100 2200
+Text Label 5100 4600 0    50   ~ 0
+3V3
 Wire Wire Line
 	4800 1050 5100 1050
 $Comp
@@ -493,8 +541,20 @@ F 1 "+48V" V 5115 1178 50  0000 L CNN
 F 2 "" H 5100 1050 50  0001 C CNN
 F 3 "" H 5100 1050 50  0001 C CNN
 	1    5100 1050
-	1    0    0    -1  
+	0    1    1    0   
 $EndComp
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5E1504A1
+P 5100 1050
+F 0 "#FLG0104" H 5100 1125 50  0001 C CNN
+F 1 "PWR_FLAG" H 5100 1223 50  0000 C CNN
+F 2 "" H 5100 1050 50  0001 C CNN
+F 3 "~" H 5100 1050 50  0001 C CNN
+	1    5100 1050
+	-1   0    0    1   
+$EndComp
+Connection ~ 5100 1050
 $Comp
 L power:+48V #PWR0106
 U 1 1 5E150EF7
@@ -507,13 +567,13 @@ F 3 "" H 5750 750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 1200 1600
-NoConn ~ 2600 2100
-NoConn ~ 2600 2200
+NoConn ~ 2200 2100
+NoConn ~ 2200 2200
 $Comp
-L Interface_RS485:SN65HVD72DR Tran1
+L Interface_RS485:SN65HVD72DR U4
 U 1 1 5E1A303D
 P 3650 2750
-F 0 "Tran1" H 3650 2787 60  0000 C CNN
+F 0 "U4" H 3650 2787 60  0000 C CNN
 F 1 "SN65HVD72DR" H 3650 2681 60  0000 C CNN
 F 2 "sn65hvd72:SN65HVD72DR" H 3650 2640 60  0001 C CNN
 F 3 "" H 3300 2500 60  0000 C CNN
@@ -553,15 +613,17 @@ F 3 "" H 4000 3600 50  0001 C CNN
 	1    4000 3600
 	1    0    0    -1  
 $EndComp
+Text Label 3300 3800 2    50   ~ 0
+3V3
 Wire Wire Line
 	3300 3100 3300 3000
 Text Label 3300 3000 2    50   ~ 0
 A4
 $Comp
-L Connector:RJ45 RJ45
+L Connector:RJ45 J5
 U 1 1 5E1D3B3B
 P 1200 3550
-F 0 "RJ45" H 1257 4217 50  0000 C CNN
+F 0 "J5" H 1257 4217 50  0000 C CNN
 F 1 "RJ45" H 1257 4126 50  0000 C CNN
 F 2 "Connector_RJ:RJ45_Pulse_JK0654219NL_Horizontal" V 1200 3575 50  0001 C CNN
 F 3 "~" V 1200 3575 50  0001 C CNN
@@ -569,10 +631,10 @@ F 3 "~" V 1200 3575 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Protection_ICs:CDSOT23-SM712 Tran_Diode1
+L Protection_ICs:CDSOT23-SM712 U1
 U 1 1 5E1E3A44
 P 2550 3600
-F 0 "Tran_Diode1" H 2850 3063 60  0000 C CNN
+F 0 "U1" H 2850 3063 60  0000 C CNN
 F 1 "CDSOT23-SM712" H 2850 3169 60  0000 C CNN
 F 2 "CDSOT23-SM712:CDSOT23-SM712" H 2850 3790 60  0001 C CNN
 F 3 "" H 2550 3600 60  0000 C CNN
@@ -601,76 +663,76 @@ NoConn ~ 1600 3350
 NoConn ~ 1600 3250
 NoConn ~ 1600 3150
 $Comp
-L Connector:Screw_Terminal_01x02 INP0
+L Connector:Screw_Terminal_01x02 J1
 U 1 1 5E2241F2
 P 1200 4800
-F 0 "INP0" H 1118 4475 50  0000 C BNN
-F 1 "Screw_Terminal_01x02" H 1118 4566 50  0001 C CNN
+F 0 "J1" H 1118 4475 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 1118 4566 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1200 4800 50  0001 C CNN
 F 3 "~" H 1200 4800 50  0001 C CNN
 	1    1200 4800
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x02 INP1
+L Connector:Screw_Terminal_01x02 J7
 U 1 1 5E2251B6
 P 1200 5250
-F 0 "INP1" H 1118 4925 50  0000 C BNN
-F 1 "Screw_Terminal_01x02" H 1118 5016 50  0001 C CNN
+F 0 "J7" H 1118 4925 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 1118 5016 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1200 5250 50  0001 C CNN
 F 3 "~" H 1200 5250 50  0001 C CNN
 	1    1200 5250
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x02 INP2
+L Connector:Screw_Terminal_01x02 J8
 U 1 1 5E22550C
 P 1200 5700
-F 0 "INP2" H 1118 5375 50  0000 C BNN
-F 1 "Screw_Terminal_01x02" H 1118 5466 50  0001 C CNN
+F 0 "J8" H 1118 5375 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 1118 5466 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1200 5700 50  0001 C CNN
 F 3 "~" H 1200 5700 50  0001 C CNN
 	1    1200 5700
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x02 INP3
+L Connector:Screw_Terminal_01x02 J9
 U 1 1 5E225A00
 P 2100 4800
-F 0 "INP3" H 2018 4475 50  0000 C BNN
-F 1 "Screw_Terminal_01x02" H 2018 4566 50  0001 C CNN
+F 0 "J9" H 2018 4475 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2018 4566 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2100 4800 50  0001 C CNN
 F 3 "~" H 2100 4800 50  0001 C CNN
 	1    2100 4800
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x02 INP4
+L Connector:Screw_Terminal_01x02 J10
 U 1 1 5E225E50
 P 2100 5250
-F 0 "INP4" H 2018 4925 50  0000 C BNN
-F 1 "Screw_Terminal_01x02" H 2018 5016 50  0001 C CNN
+F 0 "J10" H 2018 4925 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2018 5016 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2100 5250 50  0001 C CNN
 F 3 "~" H 2100 5250 50  0001 C CNN
 	1    2100 5250
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x02 INP5
+L Connector:Screw_Terminal_01x02 J11
 U 1 1 5E2263D5
 P 2100 5700
-F 0 "INP5" H 2018 5375 50  0000 C BNN
-F 1 "Screw_Terminal_01x02" H 2018 5466 50  0001 C CNN
+F 0 "J11" H 2018 5375 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 2018 5466 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2100 5700 50  0001 C CNN
 F 3 "~" H 2100 5700 50  0001 C CNN
 	1    2100 5700
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R10_1
+L Device:R R8
 U 1 1 5E1E5003
 P 2700 3600
-F 0 "R10_1" V 2800 3600 50  0000 C CNN
+F 0 "R8" V 2800 3600 50  0000 C CNN
 F 1 "10" V 2900 3600 50  0000 C CNN
 F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 2630 3600 50  0001 C CNN
 F 3 "~" H 2700 3600 50  0001 C CNN
@@ -680,10 +742,10 @@ $EndComp
 Wire Wire Line
 	2850 3500 2850 3350
 $Comp
-L Device:R R10_0
+L Device:R R1
 U 1 1 5E1E46ED
 P 2700 3350
-F 0 "R10_0" V 2493 3350 50  0000 C CNN
+F 0 "R1" V 2493 3350 50  0000 C CNN
 F 1 "10" V 2584 3350 50  0000 C CNN
 F 2 "Resistor_SMD:R_2010_5025Metric_Pad1.52x2.65mm_HandSolder" V 2630 3350 50  0001 C CNN
 F 3 "~" H 2700 3350 50  0001 C CNN
@@ -707,8 +769,8 @@ A3
 NoConn ~ 1200 1400
 NoConn ~ 1200 1300
 NoConn ~ 1200 1200
-NoConn ~ 2600 1400
-Text Label 2600 1400 2    50   ~ 0
+NoConn ~ 2200 1400
+Text Label 2200 1400 2    50   ~ 0
 D13
 Wire Wire Line
 	5750 1550 5750 1700
@@ -755,216 +817,47 @@ Wire Wire Line
 Wire Wire Line
 	9500 2550 9500 4200
 $Comp
-L Connector:Screw_Terminal_01x06 FET_Blk0
+L Connector:Screw_Terminal_01x06 J6
 U 1 1 5E363393
 P 10300 1650
-F 0 "FET_Blk0" H 10380 1642 50  0000 L CNN
-F 1 "Screw_Terminal_01x06" H 10380 1551 50  0001 L CNN
+F 0 "J6" H 10380 1642 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10380 1551 50  0000 L CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10300 1650 50  0001 C CNN
 F 3 "~" H 10300 1650 50  0001 C CNN
 	1    10300 1650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Screw_Terminal_01x06 FET_Blk1
+L Connector:Screw_Terminal_01x06 J12
 U 1 1 5E364567
 P 10300 2250
-F 0 "FET_Blk1" H 10380 2242 50  0000 L CNN
-F 1 "Screw_Terminal_01x06" H 10380 2151 50  0001 L CNN
+F 0 "J12" H 10380 2242 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10380 2151 50  0000 L CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10300 2250 50  0001 C CNN
 F 3 "~" H 10300 2250 50  0001 C CNN
 	1    10300 2250
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Male GND_Pin1
+L Connector:Conn_01x01_Male J13
 U 1 1 5E371F26
-P 7500 5650
-F 0 "GND_Pin1" H 7608 5831 50  0000 C CNN
-F 1 "GND" H 7608 5740 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7500 5650 50  0001 C CNN
-F 3 "~" H 7500 5650 50  0001 C CNN
-	1    7500 5650
+P 2200 2550
+F 0 "J13" H 2308 2731 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 2308 2640 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2200 2550 50  0001 C CNN
+F 3 "~" H 2200 2550 50  0001 C CNN
+	1    2200 2550
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 5E376948
-P 7700 5650
-F 0 "#PWR05" H 7700 5400 50  0001 C CNN
-F 1 "GND" H 7705 5477 50  0000 C CNN
-F 2 "" H 7700 5650 50  0001 C CNN
-F 3 "" H 7700 5650 50  0001 C CNN
-	1    7700 5650
+P 2400 2550
+F 0 "#PWR05" H 2400 2300 50  0001 C CNN
+F 1 "GND" H 2405 2377 50  0000 C CNN
+F 2 "" H 2400 2550 50  0001 C CNN
+F 3 "" H 2400 2550 50  0001 C CNN
+	1    2400 2550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 5V_IN1
-U 1 1 5E339327
-P 3300 1150
-F 0 "5V_IN1" H 3218 825 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 3218 916 50  0001 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3300 1150 50  0001 C CNN
-F 3 "~" H 3300 1150 50  0001 C CNN
-	1    3300 1150
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0101
-U 1 1 5E33932D
-P 3500 1150
-F 0 "#PWR0101" H 3500 900 50  0001 C CNN
-F 1 "GND" H 3505 977 50  0000 C CNN
-F 2 "" H 3500 1150 50  0001 C CNN
-F 3 "" H 3500 1150 50  0001 C CNN
-	1    3500 1150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3500 1050 3800 1050
-$Comp
-L power:+5V #PWR0103
-U 1 1 5E33B363
-P 3800 1050
-F 0 "#PWR0103" H 3800 900 50  0001 C CNN
-F 1 "+5V" H 3815 1223 50  0000 C CNN
-F 2 "" H 3800 1050 50  0001 C CNN
-F 3 "" H 3800 1050 50  0001 C CNN
-	1    3800 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0104
-U 1 1 5E3422F9
-P 2350 1300
-F 0 "#PWR0104" H 2350 1150 50  0001 C CNN
-F 1 "+5V" H 2365 1473 50  0000 C CNN
-F 2 "" H 2350 1300 50  0001 C CNN
-F 3 "" H 2350 1300 50  0001 C CNN
-	1    2350 1300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 1300 2350 1300
-$Comp
-L power:+5V #PWR0107
-U 1 1 5E3482C0
-P 5100 4600
-F 0 "#PWR0107" H 5100 4450 50  0001 C CNN
-F 1 "+5V" H 5115 4773 50  0000 C CNN
-F 2 "" H 5100 4600 50  0001 C CNN
-F 3 "" H 5100 4600 50  0001 C CNN
-	1    5100 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0108
-U 1 1 5E34894D
-P 3550 4600
-F 0 "#PWR0108" H 3550 4450 50  0001 C CNN
-F 1 "+5V" H 3565 4773 50  0000 C CNN
-F 2 "" H 3550 4600 50  0001 C CNN
-F 3 "" H 3550 4600 50  0001 C CNN
-	1    3550 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0109
-U 1 1 5E379253
-P 800 700
-F 0 "#PWR0109" H 800 550 50  0001 C CNN
-F 1 "+3V3" H 815 873 50  0000 C CNN
-F 2 "" H 800 700 50  0001 C CNN
-F 3 "" H 800 700 50  0001 C CNN
-	1    800  700 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	800  800  800  700 
-Wire Wire Line
-	800  800  1200 800 
-Wire Wire Line
-	800  1000 1200 1000
-$Comp
-L power:+3V3 #PWR0110
-U 1 1 5E3902D8
-P 3200 3850
-F 0 "#PWR0110" H 3200 3700 50  0001 C CNN
-F 1 "+3V3" H 3215 4023 50  0000 C CNN
-F 2 "" H 3200 3850 50  0001 C CNN
-F 3 "" H 3200 3850 50  0001 C CNN
-	1    3200 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0111
-U 1 1 5E3B7E7A
-P 9350 5550
-F 0 "#PWR0111" H 9350 5400 50  0001 C CNN
-F 1 "+3V3" H 9365 5723 50  0000 C CNN
-F 2 "" H 9350 5550 50  0001 C CNN
-F 3 "" H 9350 5550 50  0001 C CNN
-	1    9350 5550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3300 3800 3300 3850
-Wire Wire Line
-	3300 3850 3200 3850
-$Comp
-L Connector:Screw_Terminal_01x06 3V3_OUT0
-U 1 1 5E4611A8
-P 10250 5250
-F 0 "3V3_OUT0" H 10330 5242 50  0000 L CNN
-F 1 "Screw_Terminal_01x06" H 10330 5151 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10250 5250 50  0001 C CNN
-F 3 "~" H 10250 5250 50  0001 C CNN
-	1    10250 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x06 3V3_OUT1
-U 1 1 5E4611AE
-P 10250 5850
-F 0 "3V3_OUT1" H 10330 5842 50  0000 L CNN
-F 1 "Screw_Terminal_01x06" H 10330 5751 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10250 5850 50  0001 C CNN
-F 3 "~" H 10250 5850 50  0001 C CNN
-	1    10250 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10050 5050 10050 5150
-Wire Wire Line
-	10050 5150 10050 5250
-Connection ~ 10050 5150
-Connection ~ 10050 5250
-Wire Wire Line
-	10050 5250 10050 5350
-Connection ~ 10050 5350
-Wire Wire Line
-	10050 5350 10050 5450
-Connection ~ 10050 5450
-Wire Wire Line
-	10050 5450 10050 5550
-Connection ~ 10050 5550
-Wire Wire Line
-	10050 5550 10050 5650
-Connection ~ 10050 5650
-Wire Wire Line
-	10050 5650 10050 5750
-Connection ~ 10050 5750
-Wire Wire Line
-	10050 5750 10050 5850
-Connection ~ 10050 5850
-Wire Wire Line
-	10050 5850 10050 5950
-Connection ~ 10050 5950
-Wire Wire Line
-	10050 5950 10050 6050
-Connection ~ 10050 6050
-Wire Wire Line
-	10050 6050 10050 6150
-Wire Wire Line
-	9350 5550 10050 5550
 $EndSCHEMATC
