@@ -482,18 +482,6 @@ Wire Wire Line
 Wire Wire Line
 	4000 5800 3550 5800
 Connection ~ 3550 5800
-$Comp
-L power:PWR_FLAG #FLG0103
-U 1 1 5E13D366
-P 1100 2200
-F 0 "#FLG0103" H 1100 2275 50  0001 C CNN
-F 1 "PWR_FLAG" V 1100 2327 50  0000 L CNN
-F 2 "" H 1100 2200 50  0001 C CNN
-F 3 "~" H 1100 2200 50  0001 C CNN
-	1    1100 2200
-	0    -1   -1   0   
-$EndComp
-Connection ~ 1100 2200
 Wire Wire Line
 	4800 1050 5100 1050
 $Comp
