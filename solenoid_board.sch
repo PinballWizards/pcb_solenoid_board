@@ -28,30 +28,20 @@ Wire Wire Line
 	1200 800  1100 800 
 Wire Wire Line
 	1200 1000 1100 1000
-Wire Wire Line
-	1200 1100 1100 1100
-Wire Wire Line
-	1200 1200 1100 1200
 Text Label 1200 700  2    50   ~ 0
 RST
 Text Label 1100 800  0    50   ~ 0
 3V3
 Text Label 1200 900  2    50   ~ 0
 ARf
-Text Label 1100 1100 0    50   ~ 0
+Text Label 1200 1100 2    50   ~ 0
 A0
-Text Label 1100 1200 0    50   ~ 0
+Text Label 1200 1200 2    50   ~ 0
 A1
 Wire Wire Line
-	1200 1300 1100 1300
-Wire Wire Line
-	1200 1400 1100 1400
-Wire Wire Line
 	1200 2200 1100 2200
-Text Label 1100 1300 0    50   ~ 0
+Text Label 1200 1300 2    50   ~ 0
 A2
-Text Label 1100 1400 0    50   ~ 0
-A3
 Text Label 1200 1500 2    50   ~ 0
 A4
 Text Label 1200 1600 2    50   ~ 0
@@ -78,44 +68,24 @@ F 3 "~" H 2400 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2200 1100 2100 1100
-Wire Wire Line
-	2200 1200 2100 1200
-Wire Wire Line
 	2200 1300 2100 1300
-Wire Wire Line
-	2200 1400 2100 1400
-Wire Wire Line
-	2200 1500 2100 1500
-Wire Wire Line
-	2200 1600 2100 1600
-Wire Wire Line
-	2200 1700 2100 1700
-Wire Wire Line
-	2200 1800 2100 1800
-Wire Wire Line
-	2200 1900 2100 1900
-Wire Wire Line
-	2200 2000 2100 2000
-Text Label 2100 1100 0    50   ~ 0
+Text Label 2200 1100 2    50   ~ 0
 BAT
-Text Label 2100 1200 0    50   ~ 0
+Text Label 2200 1200 2    50   ~ 0
 En
-Text Label 2100 1300 0    50   ~ 0
+Text Label 2200 1300 2    50   ~ 0
 USB
-Text Label 2100 1400 0    50   ~ 0
-D13
-Text Label 2100 1500 0    50   ~ 0
+Text Label 2200 1500 2    50   ~ 0
 D12
-Text Label 2100 1600 0    50   ~ 0
+Text Label 2200 1600 2    50   ~ 0
 D11
-Text Label 2100 1700 0    50   ~ 0
+Text Label 2200 1700 2    50   ~ 0
 D10
-Text Label 2100 1800 0    50   ~ 0
+Text Label 2200 1800 2    50   ~ 0
 D9
-Text Label 2100 1900 0    50   ~ 0
+Text Label 2200 1900 2    50   ~ 0
 D6
-Text Label 2100 2000 0    50   ~ 0
+Text Label 2200 2000 2    50   ~ 0
 D5
 Text Label 2200 2100 2    50   ~ 0
 SCL
@@ -161,9 +131,6 @@ F 3 "" H 5750 2100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5750 950  5750 750 
-Wire Wire Line
-	5750 1450 5750 1700
-Connection ~ 5750 1450
 $Comp
 L MOSFETs:PHP79NQ08LT Q2
 U 1 1 5DDEEB2F
@@ -273,22 +240,7 @@ F 3 "" H 8000 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6500 1550 6500 2200
-Connection ~ 6500 1550
-Wire Wire Line
-	7250 1650 7250 2700
-Connection ~ 7250 1650
-Wire Wire Line
-	8000 1750 8000 3200
-Connection ~ 8000 1750
-Wire Wire Line
 	5750 1450 10100 1450
-Wire Wire Line
-	6500 1550 10100 1550
-Wire Wire Line
-	7250 1650 10100 1650
-Wire Wire Line
-	8000 1750 10100 1750
 $Comp
 L Device:R R6
 U 1 1 5DE301D3
@@ -361,16 +313,6 @@ F 3 "" H 9500 4600 50  0001 C CNN
 	1    9500 4600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8750 1850 10100 1850
-Wire Wire Line
-	8750 1850 8750 3700
-Connection ~ 8750 1850
-Wire Wire Line
-	10100 1950 9500 1950
-Connection ~ 9500 1950
-Wire Wire Line
-	9500 1950 9500 4200
 Text Label 5900 2400 2    50   ~ 0
 D11
 Text Label 6650 2900 2    50   ~ 0
@@ -432,16 +374,12 @@ Text Label 3100 5300 2    50   ~ 0
 INP2_1
 Text Label 3100 5400 2    50   ~ 0
 INP3_0
-Text Label 4000 4800 0    50   ~ 0
-A2
-Wire Wire Line
-	4000 5500 4000 5600
 Text Label 3100 5500 2    50   ~ 0
 INP3_1
 Text Label 3100 5600 2    50   ~ 0
 A0
 Text Label 4000 5400 0    50   ~ 0
-A1
+SCK
 $Comp
 L LOGIC_ICs:74HC165 U6
 U 1 1 5DF632DB
@@ -464,9 +402,9 @@ INP5_1
 Text Label 4650 5600 2    50   ~ 0
 A0
 Text Label 5550 5400 0    50   ~ 0
-A1
+SCK
 Text Label 5550 4800 0    50   ~ 0
-A3
+SHIFT2_OUT
 Wire Wire Line
 	5550 5500 5550 5600
 Wire Wire Line
@@ -577,7 +515,6 @@ Wire Wire Line
 	4000 5600 4000 5800
 Wire Wire Line
 	4000 5800 3550 5800
-Connection ~ 4000 5600
 Connection ~ 3550 5800
 $Comp
 L power:PWR_FLAG #FLG0103
@@ -645,9 +582,7 @@ F 3 "" H 3300 2500 60  0000 C CNN
 $EndComp
 Text Label 4000 3300 0    50   ~ 0
 RX0
-NoConn ~ 1200 1700
 NoConn ~ 1200 1800
-NoConn ~ 1200 1900
 Text Label 3300 3300 2    50   ~ 0
 TX1
 Wire Wire Line
@@ -655,28 +590,18 @@ Wire Wire Line
 Wire Wire Line
 	5750 950  5750 1450
 Connection ~ 5750 950 
-Wire Wire Line
-	6500 950  6500 1550
 Connection ~ 6500 950 
 Wire Wire Line
 	6500 950  7250 950 
-Wire Wire Line
-	7250 950  7250 1650
 Connection ~ 7250 950 
 Wire Wire Line
 	7250 950  8000 950 
-Wire Wire Line
-	8000 950  8000 1750
 Connection ~ 8000 950 
 Wire Wire Line
 	8000 950  8750 950 
-Wire Wire Line
-	8750 950  8750 1850
 Connection ~ 8750 950 
 Wire Wire Line
 	8750 950  9500 950 
-Wire Wire Line
-	9500 950  9500 1950
 $Comp
 L power:GND #PWR04
 U 1 1 5E1CED32
@@ -737,17 +662,6 @@ NoConn ~ 1600 3650
 NoConn ~ 1600 3350
 NoConn ~ 1600 3250
 NoConn ~ 1600 3150
-$Comp
-L Connector:Screw_Terminal_01x06 J6
-U 1 1 5E21E9C4
-P 10300 1650
-F 0 "J6" H 10380 1642 50  0000 L CNN
-F 1 "Screw_Terminal_01x06" H 10380 1551 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10300 1650 50  0001 C CNN
-F 3 "~" H 10300 1650 50  0001 C CNN
-	1    10300 1650
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J1
 U 1 1 5E2241F2
@@ -846,4 +760,104 @@ Text Label 2850 3350 0    50   ~ 0
 RJ45_4
 Text Label 2900 3600 3    50   ~ 0
 RJ45_5
+Text Label 4000 5500 0    50   ~ 0
+SHIFT2_OUT
+Text Label 4000 4800 0    50   ~ 0
+MISO
+Text Label 1200 1400 2    50   ~ 0
+A3
+NoConn ~ 1200 1400
+NoConn ~ 1200 1300
+NoConn ~ 1200 1200
+NoConn ~ 2200 1400
+Text Label 2200 1400 2    50   ~ 0
+D13
+Wire Wire Line
+	5750 1550 5750 1700
+Wire Wire Line
+	5750 1550 10100 1550
+Wire Wire Line
+	6500 950  6500 1650
+Wire Wire Line
+	6500 1750 6500 2200
+Wire Wire Line
+	7250 950  7250 1850
+Wire Wire Line
+	6500 1650 10100 1650
+Wire Wire Line
+	8000 950  8000 2050
+Wire Wire Line
+	6500 1750 10100 1750
+Wire Wire Line
+	7250 1850 10100 1850
+Wire Wire Line
+	8750 950  8750 2250
+Wire Wire Line
+	7250 1950 7250 2700
+Wire Wire Line
+	7250 1950 10100 1950
+Wire Wire Line
+	9500 950  9500 2450
+Wire Wire Line
+	10100 2050 8000 2050
+Wire Wire Line
+	10100 2150 8000 2150
+Wire Wire Line
+	8000 2150 8000 3200
+Wire Wire Line
+	10100 2250 8750 2250
+Wire Wire Line
+	10100 2350 8750 2350
+Wire Wire Line
+	8750 2350 8750 3700
+Wire Wire Line
+	10100 2450 9500 2450
+Wire Wire Line
+	10100 2550 9500 2550
+Wire Wire Line
+	9500 2550 9500 4200
+$Comp
+L Connector:Screw_Terminal_01x06 J6
+U 1 1 5E363393
+P 10300 1650
+F 0 "J6" H 10380 1642 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10380 1551 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10300 1650 50  0001 C CNN
+F 3 "~" H 10300 1650 50  0001 C CNN
+	1    10300 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x06 J12
+U 1 1 5E364567
+P 10300 2250
+F 0 "J12" H 10380 2242 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10380 2151 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10300 2250 50  0001 C CNN
+F 3 "~" H 10300 2250 50  0001 C CNN
+	1    10300 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J13
+U 1 1 5E371F26
+P 2200 2550
+F 0 "J13" H 2308 2731 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 2308 2640 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2200 2550 50  0001 C CNN
+F 3 "~" H 2200 2550 50  0001 C CNN
+	1    2200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5E376948
+P 2400 2550
+F 0 "#PWR05" H 2400 2300 50  0001 C CNN
+F 1 "GND" H 2405 2377 50  0000 C CNN
+F 2 "" H 2400 2550 50  0001 C CNN
+F 3 "" H 2400 2550 50  0001 C CNN
+	1    2400 2550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
