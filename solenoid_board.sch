@@ -24,14 +24,8 @@ F 3 "~" H 1400 1400 50  0001 C CNN
 	1    1400 1400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1200 800  1100 800 
-Wire Wire Line
-	1200 1000 1100 1000
 Text Label 1200 700  2    50   ~ 0
 RST
-Text Label 1100 800  0    50   ~ 0
-3V3
 Text Label 1200 900  2    50   ~ 0
 ARf
 Text Label 1200 1100 2    50   ~ 0
@@ -67,14 +61,10 @@ F 3 "~" H 2400 1600 50  0001 C CNN
 	1    2400 1600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2200 1300 2100 1300
 Text Label 2200 1100 2    50   ~ 0
 BAT
 Text Label 2200 1200 2    50   ~ 0
 En
-Text Label 2200 1300 2    50   ~ 0
-USB
 Text Label 2200 1500 2    50   ~ 0
 D12
 Text Label 2200 1600 2    50   ~ 0
@@ -358,8 +348,6 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf" H 3550 43
 	1    3550 4300
 	1    0    0    -1  
 $EndComp
-Text Label 3550 4600 0    50   ~ 0
-3V3
 Text Label 3100 4800 2    50   ~ 0
 INP0_0
 Text Label 3100 4900 2    50   ~ 0
@@ -448,13 +436,13 @@ $EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 5E062C1F
-P 1100 1000
-F 0 "#PWR01" H 1100 750 50  0001 C CNN
-F 1 "GND" V 1105 872 50  0000 R CNN
-F 2 "" H 1100 1000 50  0001 C CNN
-F 3 "" H 1100 1000 50  0001 C CNN
-	1    1100 1000
-	0    1    1    0   
+P 800 1000
+F 0 "#PWR01" H 800 750 50  0001 C CNN
+F 1 "GND" V 805 872 50  0000 R CNN
+F 2 "" H 800 1000 50  0001 C CNN
+F 3 "" H 800 1000 50  0001 C CNN
+	1    800  1000
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR017
@@ -478,28 +466,6 @@ NoConn ~ 1200 900
 NoConn ~ 1200 700 
 NoConn ~ 2200 1100
 NoConn ~ 2200 1200
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5E12EED8
-P 1100 800
-F 0 "#FLG0101" H 1100 875 50  0001 C CNN
-F 1 "PWR_FLAG" V 1100 927 50  0000 L CNN
-F 2 "" H 1100 800 50  0001 C CNN
-F 3 "~" H 1100 800 50  0001 C CNN
-	1    1100 800 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 5E12F5C4
-P 2100 1300
-F 0 "#FLG0102" H 2100 1375 50  0001 C CNN
-F 1 "PWR_FLAG" V 2100 1427 50  0000 L CNN
-F 2 "" H 2100 1300 50  0001 C CNN
-F 3 "~" H 2100 1300 50  0001 C CNN
-	1    2100 1300
-	0    -1   -1   0   
-$EndComp
 $Comp
 L power:GND #PWR0102
 U 1 1 5E13533A
@@ -528,8 +494,6 @@ F 3 "~" H 1100 2200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 1100 2200
-Text Label 5100 4600 0    50   ~ 0
-3V3
 Wire Wire Line
 	4800 1050 5100 1050
 $Comp
@@ -541,20 +505,8 @@ F 1 "+48V" V 5115 1178 50  0000 L CNN
 F 2 "" H 5100 1050 50  0001 C CNN
 F 3 "" H 5100 1050 50  0001 C CNN
 	1    5100 1050
-	0    1    1    0   
+	1    0    0    -1  
 $EndComp
-$Comp
-L power:PWR_FLAG #FLG0104
-U 1 1 5E1504A1
-P 5100 1050
-F 0 "#FLG0104" H 5100 1125 50  0001 C CNN
-F 1 "PWR_FLAG" H 5100 1223 50  0000 C CNN
-F 2 "" H 5100 1050 50  0001 C CNN
-F 3 "~" H 5100 1050 50  0001 C CNN
-	1    5100 1050
-	-1   0    0    1   
-$EndComp
-Connection ~ 5100 1050
 $Comp
 L power:+48V #PWR0106
 U 1 1 5E150EF7
@@ -613,8 +565,6 @@ F 3 "" H 4000 3600 50  0001 C CNN
 	1    4000 3600
 	1    0    0    -1  
 $EndComp
-Text Label 3300 3800 2    50   ~ 0
-3V3
 Wire Wire Line
 	3300 3100 3300 3000
 Text Label 3300 3000 2    50   ~ 0
@@ -667,7 +617,7 @@ L Connector:Screw_Terminal_01x02 J1
 U 1 1 5E2241F2
 P 1200 4800
 F 0 "J1" H 1118 4475 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 1118 4566 50  0000 C CNN
+F 1 "INP0" H 1118 4566 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1200 4800 50  0001 C CNN
 F 3 "~" H 1200 4800 50  0001 C CNN
 	1    1200 4800
@@ -678,7 +628,7 @@ L Connector:Screw_Terminal_01x02 J7
 U 1 1 5E2251B6
 P 1200 5250
 F 0 "J7" H 1118 4925 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 1118 5016 50  0000 C CNN
+F 1 "INP1" H 1118 5016 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1200 5250 50  0001 C CNN
 F 3 "~" H 1200 5250 50  0001 C CNN
 	1    1200 5250
@@ -689,7 +639,7 @@ L Connector:Screw_Terminal_01x02 J8
 U 1 1 5E22550C
 P 1200 5700
 F 0 "J8" H 1118 5375 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 1118 5466 50  0000 C CNN
+F 1 "INP2" H 1118 5466 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1200 5700 50  0001 C CNN
 F 3 "~" H 1200 5700 50  0001 C CNN
 	1    1200 5700
@@ -700,7 +650,7 @@ L Connector:Screw_Terminal_01x02 J9
 U 1 1 5E225A00
 P 2100 4800
 F 0 "J9" H 2018 4475 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 2018 4566 50  0000 C CNN
+F 1 "INP3" H 2018 4566 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2100 4800 50  0001 C CNN
 F 3 "~" H 2100 4800 50  0001 C CNN
 	1    2100 4800
@@ -711,7 +661,7 @@ L Connector:Screw_Terminal_01x02 J10
 U 1 1 5E225E50
 P 2100 5250
 F 0 "J10" H 2018 4925 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 2018 5016 50  0000 C CNN
+F 1 "INP4" H 2018 5016 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2100 5250 50  0001 C CNN
 F 3 "~" H 2100 5250 50  0001 C CNN
 	1    2100 5250
@@ -722,7 +672,7 @@ L Connector:Screw_Terminal_01x02 J11
 U 1 1 5E2263D5
 P 2100 5700
 F 0 "J11" H 2018 5375 50  0000 C CNN
-F 1 "Screw_Terminal_01x02" H 2018 5466 50  0000 C CNN
+F 1 "INP5" H 2018 5466 50  0000 C CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2100 5700 50  0001 C CNN
 F 3 "~" H 2100 5700 50  0001 C CNN
 	1    2100 5700
@@ -841,23 +791,192 @@ $EndComp
 $Comp
 L Connector:Conn_01x01_Male J13
 U 1 1 5E371F26
-P 2200 2550
-F 0 "J13" H 2308 2731 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 2308 2640 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2200 2550 50  0001 C CNN
-F 3 "~" H 2200 2550 50  0001 C CNN
-	1    2200 2550
+P 7500 5650
+F 0 "J13" H 7608 5831 50  0000 C CNN
+F 1 "GND" H 7608 5740 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 7500 5650 50  0001 C CNN
+F 3 "~" H 7500 5650 50  0001 C CNN
+	1    7500 5650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 5E376948
-P 2400 2550
-F 0 "#PWR05" H 2400 2300 50  0001 C CNN
-F 1 "GND" H 2405 2377 50  0000 C CNN
-F 2 "" H 2400 2550 50  0001 C CNN
-F 3 "" H 2400 2550 50  0001 C CNN
-	1    2400 2550
+P 7700 5650
+F 0 "#PWR05" H 7700 5400 50  0001 C CNN
+F 1 "GND" H 7705 5477 50  0000 C CNN
+F 2 "" H 7700 5650 50  0001 C CNN
+F 3 "" H 7700 5650 50  0001 C CNN
+	1    7700 5650
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J14
+U 1 1 5E339327
+P 3300 1150
+F 0 "J14" H 3218 825 50  0000 C CNN
+F 1 "MCU_PWR_Supply" H 3218 916 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 3300 1150 50  0001 C CNN
+F 3 "~" H 3300 1150 50  0001 C CNN
+	1    3300 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E33932D
+P 3500 1150
+F 0 "#PWR0101" H 3500 900 50  0001 C CNN
+F 1 "GND" H 3505 977 50  0000 C CNN
+F 2 "" H 3500 1150 50  0001 C CNN
+F 3 "" H 3500 1150 50  0001 C CNN
+	1    3500 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1050 3800 1050
+$Comp
+L power:+5V #PWR0103
+U 1 1 5E33B363
+P 3800 1050
+F 0 "#PWR0103" H 3800 900 50  0001 C CNN
+F 1 "+5V" H 3815 1223 50  0000 C CNN
+F 2 "" H 3800 1050 50  0001 C CNN
+F 3 "" H 3800 1050 50  0001 C CNN
+	1    3800 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 5E3422F9
+P 1950 1300
+F 0 "#PWR0104" H 1950 1150 50  0001 C CNN
+F 1 "+5V" H 1965 1473 50  0000 C CNN
+F 2 "" H 1950 1300 50  0001 C CNN
+F 3 "" H 1950 1300 50  0001 C CNN
+	1    1950 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1300 1950 1300
+$Comp
+L power:+5V #PWR0107
+U 1 1 5E3482C0
+P 5100 4600
+F 0 "#PWR0107" H 5100 4450 50  0001 C CNN
+F 1 "+5V" H 5115 4773 50  0000 C CNN
+F 2 "" H 5100 4600 50  0001 C CNN
+F 3 "" H 5100 4600 50  0001 C CNN
+	1    5100 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0108
+U 1 1 5E34894D
+P 3550 4600
+F 0 "#PWR0108" H 3550 4450 50  0001 C CNN
+F 1 "+5V" H 3565 4773 50  0000 C CNN
+F 2 "" H 3550 4600 50  0001 C CNN
+F 3 "" H 3550 4600 50  0001 C CNN
+	1    3550 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0109
+U 1 1 5E379253
+P 800 700
+F 0 "#PWR0109" H 800 550 50  0001 C CNN
+F 1 "+3V3" H 815 873 50  0000 C CNN
+F 2 "" H 800 700 50  0001 C CNN
+F 3 "" H 800 700 50  0001 C CNN
+	1    800  700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  800  800  700 
+Wire Wire Line
+	800  800  1200 800 
+Wire Wire Line
+	800  1000 1200 1000
+$Comp
+L power:+3V3 #PWR0110
+U 1 1 5E3902D8
+P 3200 3850
+F 0 "#PWR0110" H 3200 3700 50  0001 C CNN
+F 1 "+3V3" H 3215 4023 50  0000 C CNN
+F 2 "" H 3200 3850 50  0001 C CNN
+F 3 "" H 3200 3850 50  0001 C CNN
+	1    3200 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0111
+U 1 1 5E3B7E7A
+P 9350 5550
+F 0 "#PWR0111" H 9350 5400 50  0001 C CNN
+F 1 "+3V3" H 9365 5723 50  0000 C CNN
+F 2 "" H 9350 5550 50  0001 C CNN
+F 3 "" H 9350 5550 50  0001 C CNN
+	1    9350 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3800 3300 3850
+Wire Wire Line
+	3300 3850 3200 3850
+$Comp
+L Connector:Screw_Terminal_01x06 J15
+U 1 1 5E4611A8
+P 10250 5250
+F 0 "J15" H 10330 5242 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10330 5151 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10250 5250 50  0001 C CNN
+F 3 "~" H 10250 5250 50  0001 C CNN
+	1    10250 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x06 J16
+U 1 1 5E4611AE
+P 10250 5850
+F 0 "J16" H 10330 5842 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 10330 5751 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-6_P5.08mm" H 10250 5850 50  0001 C CNN
+F 3 "~" H 10250 5850 50  0001 C CNN
+	1    10250 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 5050 10050 5150
+Wire Wire Line
+	10050 5150 10050 5250
+Connection ~ 10050 5150
+Connection ~ 10050 5250
+Wire Wire Line
+	10050 5250 10050 5350
+Connection ~ 10050 5350
+Wire Wire Line
+	10050 5350 10050 5450
+Connection ~ 10050 5450
+Wire Wire Line
+	10050 5450 10050 5550
+Connection ~ 10050 5550
+Wire Wire Line
+	10050 5550 10050 5650
+Connection ~ 10050 5650
+Wire Wire Line
+	10050 5650 10050 5750
+Connection ~ 10050 5750
+Wire Wire Line
+	10050 5750 10050 5850
+Connection ~ 10050 5850
+Wire Wire Line
+	10050 5850 10050 5950
+Connection ~ 10050 5950
+Wire Wire Line
+	10050 5950 10050 6050
+Connection ~ 10050 6050
+Wire Wire Line
+	10050 6050 10050 6150
+Wire Wire Line
+	9350 5550 10050 5550
 $EndSCHEMATC
