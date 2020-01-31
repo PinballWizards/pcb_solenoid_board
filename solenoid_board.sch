@@ -26,8 +26,6 @@ F 3 "~" H 1400 1400 50  0001 C CNN
 $EndComp
 Text Label 1200 700  2    50   ~ 0
 RST
-Text Label 1100 800  0    50   ~ 0
-3V3
 Text Label 1200 900  2    50   ~ 0
 ARf
 Text Label 1200 1100 2    50   ~ 0
