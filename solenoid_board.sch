@@ -95,7 +95,7 @@ F 3 "~" H 5300 1900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 5150 1900 2    50   ~ 0
-D12
+D10
 $Comp
 L MOSFETs:PHP79NQ08LT Q1
 U 1 1 5DDD651E
@@ -308,13 +308,13 @@ $EndComp
 Text Label 5900 2400 2    50   ~ 0
 D11
 Text Label 6650 2900 2    50   ~ 0
-D10
+D12
 Text Label 7400 3400 2    50   ~ 0
-D9
+D5
 Text Label 8150 3900 2    50   ~ 0
 D6
 Text Label 8900 4400 2    50   ~ 0
-D5
+D9
 Text Label 1250 6250 0    50   ~ 0
 INP0_0
 Text Label 1250 6150 0    50   ~ 0
