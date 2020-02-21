@@ -93,7 +93,7 @@ F 3 "~" H 5300 1900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text Label 5150 1900 2    50   ~ 0
-D10
+D12
 $Comp
 L MOSFETs:PHP79NQ08LT FET0
 U 1 1 5DDD651E
@@ -302,36 +302,36 @@ $EndComp
 Text Label 5900 2400 2    50   ~ 0
 D11
 Text Label 6650 2900 2    50   ~ 0
-D12
+D10
 Text Label 7400 3400 2    50   ~ 0
-D5
+D9
 Text Label 8150 3900 2    50   ~ 0
 D6
 Text Label 8900 4400 2    50   ~ 0
-D9
-Text Label 1050 6500 0    50   ~ 0
-INP0_0
+D5
 Text Label 1050 6400 0    50   ~ 0
+INP0_0
+Text Label 1050 6500 0    50   ~ 0
 INP0_1
-Text Label 1050 6700 0    50   ~ 0
-INP1_0
 Text Label 1050 6600 0    50   ~ 0
+INP1_0
+Text Label 1050 6700 0    50   ~ 0
 INP1_1
-Text Label 1050 6900 0    50   ~ 0
-INP2_0
 Text Label 1050 6800 0    50   ~ 0
+INP2_0
+Text Label 1050 6900 0    50   ~ 0
 INP2_1
-Text Label 2000 6500 0    50   ~ 0
-INP3_0
 Text Label 2000 6400 0    50   ~ 0
+INP3_0
+Text Label 2000 6500 0    50   ~ 0
 INP3_1
-Text Label 2000 6700 0    50   ~ 0
-INP4_0
 Text Label 2000 6600 0    50   ~ 0
+INP4_0
+Text Label 2000 6700 0    50   ~ 0
 INP4_1
-Text Label 2000 6900 0    50   ~ 0
-INP5_0
 Text Label 2000 6800 0    50   ~ 0
+INP5_0
+Text Label 2000 6900 0    50   ~ 0
 INP5_1
 $Comp
 L LOGIC_ICs:74HC165 8b1
@@ -1001,4 +1001,34 @@ F 3 "~" H 1100 3950 50  0001 C CNN
 	1    1100 3950
 	-1   0    0    1   
 $EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5E52A503
+P 5250 1350
+F 0 "#PWR0109" H 5250 1100 50  0001 C CNN
+F 1 "GND" H 5255 1177 50  0000 C CNN
+F 2 "" H 5250 1350 50  0001 C CNN
+F 3 "" H 5250 1350 50  0001 C CNN
+	1    5250 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 5E52AD35
+P 5250 1000
+F 0 "#PWR0116" H 5250 750 50  0001 C CNN
+F 1 "GND" H 5255 827 50  0000 C CNN
+F 2 "" H 5250 1000 50  0001 C CNN
+F 3 "" H 5250 1000 50  0001 C CNN
+	1    5250 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1000 5250 950 
+Wire Wire Line
+	5000 950  5250 950 
+Wire Wire Line
+	5250 1350 5250 1300
+Wire Wire Line
+	5250 1300 5000 1300
 $EndSCHEMATC
